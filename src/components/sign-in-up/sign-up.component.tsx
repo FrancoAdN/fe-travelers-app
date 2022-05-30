@@ -12,7 +12,15 @@ export function SignUp() {
   const [password, setPassword] = useState('');
   const [retype, setRetype] = useState('');
 
-  const signUp = (event: React.FormEvent) => {
+  const clearInputs = () => {
+    setEmail('');
+    setName('');
+    setLastname('');
+    setUsername('');
+    setPassword('');
+    setRetype('');
+  }
+  const signUp = async (event: React.FormEvent) => {
     event.preventDefault();
 
     const register: RegisterDto = {
@@ -23,7 +31,8 @@ export function SignUp() {
       email,
     };
 
-    authService.signUp(register);
+    await authService.signUp(register);
+    clearInputs();
   };
 
   return (

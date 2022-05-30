@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { RecoverAuth, SignInUpWrapper } from '../components';
-import { AuthRouteState } from '../enums';
+import { RecoverAuth, SignInUpWrapper } from '../../components';
+import { AuthRouteState } from '../../enums';
 import { AuthWrapperStyle } from './auth-wrapper.style';
 
 export function RouteWrapper() {

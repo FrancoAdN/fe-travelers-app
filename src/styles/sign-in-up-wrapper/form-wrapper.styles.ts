@@ -8,4 +8,5 @@ export const SignInUpWrapperFormStyles: CSS.Properties = {
   padding: '40px',
   borderRadius: '50px',
   cursor: 'pointer',
+  border: `3px solid ${palette.EMERALD}`,
 };
