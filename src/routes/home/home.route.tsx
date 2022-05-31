@@ -1,7 +1,9 @@
+import { NavHome } from "../../components";
+
 export function Home() {
   return (
   <div>
-    <h1>HOME ROUTE</h1>
+    <NavHome />
   </div>
   );
 }
