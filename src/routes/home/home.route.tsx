@@ -1,9 +1,11 @@
-import { NavHome } from "../../components";
+import { NavHome, PublicationsWrapper } from "../../components";
+import { HomeWrapperStyles } from "../../styles";
 
 export function Home() {
   return (
-  <div>
+  <div style={HomeWrapperStyles}>
     <NavHome />
+    <PublicationsWrapper />
   </div>
   );
 }

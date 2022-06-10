@@ -1,4 +1,3 @@
-import React from 'react';
 import { SignInButtonSubmitStyles, SignInButtonWrapperStyles } from '../../styles';
 
 export function SignInUpButton() {

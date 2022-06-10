@@ -11,4 +11,6 @@ export const NavHomeStyles: CSS.Properties = {
   ...BasicFlexBox(FlexDirectionEnum.Row),
   justifyContent: 'space-evenly',
   alignItems: 'center',
+  backgroundColor: '#181818',
+  zIndex: 1000,
 };
