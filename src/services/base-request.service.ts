@@ -19,7 +19,6 @@ export class BaseRequestService {
   // }
 
   private getAxiosConfig(url: string, method: Method, headers?: any): AxiosRequestConfig {
-    console.log(this.baseUrl);
     return {
       url,
       method,
@@ -45,7 +44,6 @@ export class BaseRequestService {
       ...config,
       data,
     };
-    console.log(url, config);
     return this.request(config);
   }
 

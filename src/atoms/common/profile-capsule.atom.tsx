@@ -6,7 +6,6 @@ interface ProfileCapsuleProps {
 }
 
 export function ProfileCapsule({ profilePhoto, dimension, onClick }: ProfileCapsuleProps) {
-  const source = profilePhoto ? profilePhoto : require('../../pictures/default-profile-icon.jpg');
   const styles: CSS.Properties = {
     width: dimension,
     height: dimension,
@@ -21,7 +20,7 @@ export function ProfileCapsule({ profilePhoto, dimension, onClick }: ProfileCaps
 
   return (
     <div style={styles} onClick={() => onClick()}>
-      <img style={imgStyles} src={source} alt="user-profile"/>
+      <img style={imgStyles} src={profilePhoto} alt="user-profile"/>
     </div>
   )
 }
