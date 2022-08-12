@@ -5,7 +5,7 @@ export class AuthService extends BaseRequestService {
   private static instance: AuthService;
   private static PREFIX = 'auth/';
   constructor() {
-    super(`http://localhost:3000/api/${AuthService.PREFIX}`);
+    super(`${String(process.env.REACT_APP_BASE_URL)}${AuthService.PREFIX}`);
     if (AuthService.instance === null) AuthService.instance = this;
     return AuthService.instance;
   }
