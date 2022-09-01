@@ -1,5 +1,5 @@
 import CSS from 'csstype';
-import { BasicFlexBox, palette } from '../common.styles';
+import { BasicFlexBox } from '../common.styles';
 import { FlexDirectionEnum } from '../../enums';
 
 export const ProfileHeaderWrapperStyles: CSS.Properties = {
@@ -7,5 +7,4 @@ export const ProfileHeaderWrapperStyles: CSS.Properties = {
   height: '300px',
   ...BasicFlexBox(FlexDirectionEnum.Row),
   alignItems: 'center',
-  borderBottom: `1px solid ${palette.LIGHT_GREY}`,
 };

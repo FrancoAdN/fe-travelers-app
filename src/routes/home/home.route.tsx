@@ -4,11 +4,11 @@ import { HomeWrapperStyles } from "../../styles";
 
 export function Home() {
   return (
-  <div style={HomeWrapperStyles}>
-    <NavHome />
-    <MainContentWrapper>
-      <PublicationsWrapper publications={PublicationArrayMock}/>
-    </MainContentWrapper>
-  </div>
+    <div style={HomeWrapperStyles}>
+      <NavHome />
+      <MainContentWrapper>
+        <PublicationsWrapper publications={PublicationArrayMock}/>
+      </MainContentWrapper>
+    </div>
   );
 }

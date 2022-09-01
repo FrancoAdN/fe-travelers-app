@@ -1,21 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { SignInUpInput, SignInUpButton } from '../../atoms';
-import { CredentialsDto } from '../../dtos';
+import { CredentialsDto, UserDto } from '../../dtos';
 import { AuthRouteState } from '../../enums';
 import authService from '../../services/auth.service';
 import { SignInPWrapperStyles, SignInUpFormStyles } from '../../styles';
 import Cookie from 'js-cookie';
-import { useNavigate } from 'react-router';
+import jwt_decode from "jwt-decode";
+import { UserContext } from '../../context';
 
 export function SignIn(props: {setAuthState: Function}) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [redirect, setRedirect] = useState(false);
-  const navigate = useNavigate();
+  const { setUser } = useContext(UserContext);
 
-  useEffect(() => {
-    if (redirect) navigate('/home')
-  });
   const signIn = async (event: React.FormEvent) => {
     event.preventDefault();
     const credentials: CredentialsDto = {
@@ -26,7 +23,8 @@ export function SignIn(props: {setAuthState: Function}) {
     const result = await authService.signIn(credentials);
     const authToken = result?.data.token;
     Cookie.set('user', authToken);
-    setRedirect(true);
+    setUser(new UserDto(jwt_decode(authToken)))
+
   };
 
   return (
