@@ -3,7 +3,7 @@ import { RecoverAuth, SignInUpWrapper } from '../../components';
 import { AuthRouteState } from '../../enums';
 import { AuthWrapperStyle } from './auth-wrapper.style';
 
-export function RouteWrapper() {
+export function AuthRouteWrapper() {
   return (
   <div style={AuthWrapperStyle}>
     <AuthRoute />

@@ -8,3 +8,5 @@ export * from './messages.icon';
 export * from './interactions';
 export * from './right-arrow.icon';
 export * from './left-arrow.icon';
+export * from './profile-post-option.icon';
+export * from './profile-map-option.icon';

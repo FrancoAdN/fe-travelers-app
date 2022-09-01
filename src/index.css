@@ -20,3 +20,8 @@ body {
   height: 100%;
   background-color: #181818;
 }
+
+.jvectormap-container svg {
+  position: absolute;
+  top: -200px;
+}
